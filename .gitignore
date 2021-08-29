@@ -4,3 +4,4 @@ typechain
 artifacts
 .vscode
 .husky
+!dist/**
