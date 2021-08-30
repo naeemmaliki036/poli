@@ -1,4 +1,5 @@
 node_modules
+.privatekey
 cache
 typechain
 artifacts

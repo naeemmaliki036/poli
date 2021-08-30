@@ -18,7 +18,6 @@ async function main() {
   // We get the contract to deploy
 const signers = await hre.ethers.getSigners();
 const tokensOwner = "0x085a958427aaA3Ac8Be6174F630a96641538E280"; //Naeem
-//const tokensOwner = "0x91443b37E0dD68Dc85ee41BeC704F7f9506b7728"; //Anoop
 
 //console.log(contractJSON.abi);
 //console.log(contractJSON.bytecode);
@@ -26,8 +25,6 @@ const tokensOwner = "0x085a958427aaA3Ac8Be6174F630a96641538E280"; //Naeem
 
 //const ContractToDeploy = await hre.ethers.getContractFactory("Poli");
 const ContractToDeploy = await hre.ethers.ContractFactory(contractJSON.abi, contractJSON.bytecode, signers[0])
-
-console.log(ContractToDeploy);
 
 const poliContract = await ContractToDeploy.deploy(tokensOwner);
 
